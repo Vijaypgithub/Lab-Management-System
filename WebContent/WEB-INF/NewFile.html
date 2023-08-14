@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+@media print {
+	body * {
+		visibility: visible;
+	}
+	.print-container, .print-container * {
+		visibility: visible;
+	}
+}
+
+table, th, td {
+	border: 5px solid black;
+	
+}
+</style>
+
+<div class="w3-right footer">
+		<center>
+			<button id="print" class="w3-button" onclick="window.print();">Print</button>
+		</center>
+	</div>
+	<center><a href="http://localhost:8081/lab__report_creator/Homepage">GO TO HOMEPAge</a></center>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="printThis.js"></script>
+	<script type="text/javascript">
+		$('#print').click(function() {
+			$('container').printThis();
+		})
+	</script>
+	
+	
+	</head>
+	
+<body>
+
+</body>
+</html>
